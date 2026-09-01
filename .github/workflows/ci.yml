@@ -52,5 +52,6 @@ jobs:
         cache: 'npm'
     - name: Run Tests
       run: echo "Running Tests"
+    - name: Tests Executed
       run: echo "Tests Executed!"
 
