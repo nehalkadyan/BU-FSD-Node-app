@@ -1,0 +1,16 @@
+services:
+  # first service - mongo 
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  bu-fsd-node:
+    container_name: bu-fsd-node
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - MONGO_URL=mongodb://mongo:27017
